@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>User form</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <div>
+            <h:outputLabel value="rollNumber"/>&nbsp;<h:inputText value="#{myStudentBean.student.rollNumber}"/>
+        </div>
+        <div>
+            <h:outputLabel value="firstName"/>&nbsp;<h:inputText value="#{myStudentBean.student.firstName}"/>
+        </div>
+        <div>
+            <h:outputLabel value="lastName"/>&nbsp;<h:inputText value="#{myStudentBean.student.lastName}"/>
+        </div>
+       <!-- <div>
+            <h:outputLabel value="Gender"/>&nbsp;
+            <h:selectOneRadio value="#{studentBean.student.gender}">
+                <f:selectItem itemValue="1" itemLabel="Male" />
+                <f:selectItem itemValue="0" itemLabel="Female" />
+                <f:selectItem itemValue="2" itemLabel="Other" />
+            </h:selectOneRadio>
+        </div>
+        <div>
+            <h:outputLabel value="Favourites"/>&nbsp;
+            <h:selectManyCheckbox value="#{studentBean.favourites}">
+                <f:selectItem itemValue="Game" itemLabel="Game" />
+                <f:selectItem itemValue="Reading" itemLabel="Reading" />
+                <f:selectItem itemValue="Design" itemLabel="Design" />
+                <f:selectItem itemValue="Coding" itemLabel="Coding" />
+                <f:selectItem itemValue="Music" itemLabel="Music" />
+                <f:selectItem itemValue="Food" itemLabel="Food" />
+                <f:selectItem itemValue="Sport" itemLabel="Sport" />
+            </h:selectManyCheckbox>
+        </div>
+        <div>
+            <h:outputLabel value="Sports"/>&nbsp;
+            <h:selectManyCheckbox value="#{studentBean.sports}">
+                <f:selectItem itemValue="Football" itemLabel="Football" />
+                <f:selectItem itemValue="Basketball" itemLabel="Basketball" />
+            </h:selectManyCheckbox>
+        </div>
+        <div>
+            <h:outputLabel value="Status"/>&nbsp;
+            <h:selectManyCheckbox value="#{studentBean.student.status}">
+                <f:selectItem itemValue="1" itemLabel="Active" />
+                <f:selectItem itemValue="0" itemLabel="Deactive" />
+                <f:selectItem itemValue="-1" itemLabel="Deleted" />
+            </h:selectManyCheckbox>
+        </div>-->
+        <div>
+            <h:outputLabel value="Gender"/>
+            <h:selectOneRadio value="#{myStudentBean.student.gender}">
+                <f:selectItem itemValue="1" itemLabel="Male"/>
+                <f:selectItem itemValue="0" itemLabel="Female"/>
+                <f:selectItem itemValue="2" itemLabel="Other"/>
+            </h:selectOneRadio>
+        </div>
+        <div>
+            <h:outputLabel value="Favourites"/>
+            <h:selectManyCheckbox value="#{myStudentBean.favourites}">
+                <f:selectItem itemValue="Game" itemLabel="Game"/>
+                <f:selectItem itemValue="Reading" itemLabel="Reading"/>
+                <f:selectItem itemValue="Design" itemLabel="Design"/>
+                <f:selectItem itemValue="Coding" itemLabel="Coding"/>
+                <f:selectItem itemValue="Music" itemLabel="Music"/>
+                <f:selectItem itemValue="Food" itemLabel="Food"/>
+                <f:selectItem itemValue="Sport" itemLabel="Sport"/>
+            </h:selectManyCheckbox>
+        </div>
+        <div>
+            <h:outputLabel value="Sports"/>
+            <h:selectManyCheckbox value="#{myStudentBean.sports}">
+                <f:selectItem itemValue="Football" itemLabel="Football"/>
+                <f:selectItem itemValue="Basketball" itemLabel="Basketball"/>
+            </h:selectManyCheckbox>
+        </div>
+        <div>
+            <h:outputLabel value="Status"/>
+            <h:selectOneMenu value = "#{myStudentBean.student.status}">
+                <f:selectItem itemValue = "1" itemLabel = "Active" />
+                <f:selectItem itemValue = "0" itemLabel = "Deactive" />
+                <f:selectItem itemValue = "-1" itemLabel = "Deleted" />
+            </h:selectOneMenu>
+        </div>
+        <div>
+            <!--Khi gọi đến hàm login thì nó sẽ set Account auto-->
+            <h:commandButton value="Submit Student" action="#{myStudentBean.saveStudent()}"/>
+            <h:commandButton value="Reset"/>
+        </div>
+    </h:form>
+</h:body>
+</html>
